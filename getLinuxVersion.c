@@ -7,14 +7,14 @@
 
 #define BUFFER_MAX_SIZE 1024
 ////////////////////////////
-typedef int FILE_DIRECTORY;
+typedef int FILE_DESCRIPTOR;
 
 int main(void)
 {
 
  char buffer[BUFFER_MAX_SIZE] = {0};
- FILE_DIRECTORY file = open("version.txt", O_CREAT | O_WRONLY, 0644);
- FILE_DIRECTORY file_data = open("/proc/version", O_RDONLY);
+ FILE_DESCRIPTOR file = open("version.txt", O_CREAT | O_WRONLY, 0644);
+ FILE_DESCRIPTOR file_data = open("/proc/version", O_RDONLY);
 
  ssize_t bytes_read = read(file_data, buffer, sizeof(buffer));
  // ssize_t read() -> return bytes read
