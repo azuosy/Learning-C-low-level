@@ -13,7 +13,7 @@ int main(void)
 {
 
  char buffer[BUFFER_MAX_SIZE] = {0};
- FILE_DIRECTORY file = open("data.txt", O_CREAT | O_WRONLY, 0644);
+ FILE_DIRECTORY file = open("version.txt", O_CREAT | O_WRONLY, 0644);
  FILE_DIRECTORY file_data = open("/proc/version", O_RDONLY);
 
  ssize_t bytes_read = read(file_data, buffer, sizeof(buffer));
