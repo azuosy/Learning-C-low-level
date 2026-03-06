@@ -7,7 +7,7 @@
 int main(void)
 {
 
-    printf("Size str mylib: %d\nSize str lib: %d\n", my_strlen("malaquiano"), strlen("malaquiano"));
+    printf("Size str mylib: %d\nSize str lib: %d\n", my_strlen("something"), strlen("something"));
 
     return 0;
 }
