@@ -2,13 +2,13 @@
 
 char *my_strrev(char *str)
 {
-    // Reverse a string
+    /* Reverse a string */
 
     char *start = str;
     char *end = str;
 
     while (*end) {end++;}
-    end--; // '\0'
+    end--; /* '\0' */
 
     while (start < end)
     {
@@ -25,10 +25,16 @@ char *my_strrev(char *str)
 
 size_t my_strlen(const char *str)
 {
-    size_t bytes = 0;
-    const char *p = str;
+    /* Size of a string */
 
-    while (*p) {p++; bytes++;}
+    const char *ptr = str;
 
-    return bytes;     
-}
+    while (*ptr) {ptr++;}
+
+    return (size_t)(ptr - str);
+
+    /* 
+       I discovered that performing operations
+       with pointers results in a number
+    */
+} 
